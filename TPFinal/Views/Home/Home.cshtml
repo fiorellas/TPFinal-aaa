@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "EstudioFácil";
+}
+﻿@using TPFinal.Models;
+
+<div class="jumbotron">
+    <h1>@ViewBag.Nombre </h1>
+    <p class="lead">[desarrolle].</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<h3>Usuarios destacados</h3>
+
+<div class="row">
+    @foreach (Usuario unUsuario in ViewBag.Listado)
+    {
+        <div class="col-md-4">
+            <h4>@unUsuario.Nombre1</h4>
+            <p>
+                @unUsuario.Descripcion1
+            </p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Ver perfil &raquo;</a></p>
+        </div>
+    }
+</div>
